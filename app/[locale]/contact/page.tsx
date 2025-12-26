@@ -41,17 +41,53 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError(null);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    const formId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID;
+    if (!formId) {
+      setIsSubmitting(false);
+      setSubmitError("Form configuration is missing. Please try again later.");
+      return;
+    }
+
+    const formElement = e.currentTarget as HTMLFormElement;
+    const submission = new FormData(formElement);
+    submission.append("inquiryType", inquiryType);
+
+    if (formData.file) {
+      submission.set("attachment", formData.file);
+    }
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${formId}`, {
+        method: "POST",
+        body: submission,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        const payload = await response.json().catch(() => null);
+        const errorMessage =
+          payload?.errors?.[0]?.message ||
+          payload?.error ||
+          "Something went wrong. Please try again.";
+        setSubmitError(errorMessage);
+      }
+    } catch (error) {
+      setSubmitError("Unable to send your message right now. Please try again later.");
+    }
 
     setIsSubmitting(false);
-    setIsSubmitted(true);
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -82,6 +118,7 @@ export default function Contact() {
                 setIsSubmitted(false);
                 setStep(1);
                 setInquiryType("");
+                setSubmitError(null);
                 setFormData({
                   name: "",
                   email: "",
@@ -263,6 +300,7 @@ export default function Contact() {
                       </label>
                       <input
                         type="text"
+                        name="name"
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -277,6 +315,7 @@ export default function Contact() {
                       </label>
                       <input
                         type="email"
+                        name="email"
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -293,6 +332,7 @@ export default function Contact() {
                       </label>
                       <input
                         type="text"
+                        name="company"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         className="input w-full"
@@ -306,6 +346,7 @@ export default function Contact() {
                       </label>
                       <input
                         type="url"
+                        name="website"
                         value={formData.website}
                         onChange={(e) => setFormData({ ...formData, website: e.target.value })}
                         className="input w-full"
@@ -319,6 +360,7 @@ export default function Contact() {
                       Message <span className="text-error">*</span>
                     </label>
                     <textarea
+                      name="message"
                       required
                       rows={6}
                       value={formData.message}
@@ -336,6 +378,7 @@ export default function Contact() {
                       <div className="border-2 border-dashed border-neutral-300 dark:border-border-dark rounded-xl p-6 text-center">
                         <input
                           type="file"
+                          name="attachment"
                           onChange={handleFileChange}
                           className="hidden"
                           id="file-upload"
@@ -434,6 +477,12 @@ export default function Contact() {
                       </span>
                     </label>
                   </div>
+
+                  {submitError && (
+                    <div className="rounded-lg border border-error/30 bg-error/10 px-4 py-3 text-sm text-error">
+                      {submitError}
+                    </div>
+                  )}
 
                   <div className="flex justify-between pt-4">
                     <button

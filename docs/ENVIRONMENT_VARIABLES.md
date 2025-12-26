@@ -121,6 +121,12 @@ npm run dev
 - **Required**: Yes (for CMS operations)
 - **Public**: No (server-side only)
 
+### NEXT_PUBLIC_FORMSPREE_FORM_ID
+- **Purpose**: Formspree form identifier for contact submissions
+- **Example**: `xyzaylqn`
+- **Required**: Yes (for contact form submissions)
+- **Public**: Yes
+
 ## Security Notes
 
 1. **Never commit `.env.local` or `.env` files to version control**
