@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: auracasa-app
+    env: node
+    plan: starter
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: NEXT_PUBLIC_SITE_URL
+        value: "https://your-render-domain.onrender.com"
+      - key: NEXT_PUBLIC_SANITY_PROJECT_ID
+        sync: false
+      - key: NEXT_PUBLIC_SANITY_DATASET
+        value: "production"
+      - key: SANITY_API_TOKEN
+        sync: false
+      - key: NEXT_PUBLIC_PLAUSIBLE_DOMAIN
+        value: "auracasa.com"
+      - key: NEXT_PUBLIC_FORMSPREE_FORM_ID
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: RESEND_AUDIENCE_ID
+        sync: false
