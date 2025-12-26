@@ -1,0 +1,215 @@
+{
+  "navigation": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "journal": "Journal",
+    "about": "About",
+    "services": "Services",
+    "contact": "Work with us"
+  },
+  "home": {
+    "hero": {
+      "title": "Imaginary interiors.",
+      "titleAccent": "Made real.",
+      "description": "Auracasa designs clean, futuristic spaces with a warm human touch. Explore our portfolio or read the journal behind each vision.",
+      "viewPortfolio": "View Portfolio",
+      "ourServices": "Our Services"
+    },
+    "featured": {
+      "title": "Featured Projects"
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "AI, real and hybrid projects — clean, futuristic, warm.",
+    "tags": {
+      "ai": "AI",
+      "hybrid": "Hybrid",
+      "real": "Real",
+      "warmFuturism": "Warm Futurism",
+      "materialStudy": "Material Study",
+      "minimalBrut": "Minimal Brut"
+    }
+  },
+  "journal": {
+    "title": "Journal",
+    "posts": {
+      "vision": {
+        "title": "Auracasa Vision: Clean Futuristic + Warm Human",
+        "body": "Short essay about blending futuristic lines with warm materials."
+      },
+      "colorStories": {
+        "title": "Color Stories: Desert Clay & Sky Blue",
+        "body": "Palette notes and moodboard guidance."
+      }
+    }
+  },
+  "about": {
+    "title": "About Auracasa",
+    "description": "We merge imaginative design with tangible craft. Our team blends AI exploration with real materials to create spaces that feel both futuristic and human."
+  },
+  "services": {
+    "title": "Services",
+    "essentials": {
+      "title": "Essentials",
+      "description": "Logo & palette, 6 visuals, 1 case story."
+    },
+    "premium": {
+      "title": "Premium",
+      "description": "Brand kit, 12 visuals, 2 case stories, launch landing."
+    }
+  },
+  "contact": {
+    "title": "Work with us",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send",
+      "consent": "By submitting, you agree to our {privacyLink}.",
+      "privacyPolicy": "privacy policy"
+    }
+  },
+  "footer": {
+    "description": "Creating spaces that exist between dream and structure. Through AI and imagination, we explore how future living could feel—clean lines meeting warm materiality.",
+    "explore": "Explore",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "impressum": "Impressum",
+    "copyright": "© {year} Auracasa. All rights reserved.",
+    "affiliateDisclosure": "Affiliate Disclosure: This site contains affiliate links. We may earn a commission from purchases made through these links."
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: {date}"
+    },
+    "impressum": {
+      "title": "Impressum"
+    }
+  },
+  "common": {
+    "readMore": "Read more",
+    "learnMore": "Learn more",
+    "viewProject": "View project",
+    "backToHome": "Back to home",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "notFound": "Page not found"
+  },
+  "projects": {
+    "sunsetLoft": {
+      "title": "Sunset Loft",
+      "tag": "AI • Warm Futurism",
+      "description": "A loft bathed in sunset tones, balancing clean geometry with soft textures."
+    },
+    "desertAtelier": {
+      "title": "Desert Atelier",
+      "tag": "Hybrid • Material Study",
+      "description": "Clay, linen and glass; a studio between imagination and craft."
+    },
+    "concretePoem": {
+      "title": "Concrete Poem",
+      "tag": "Real • Minimal Brut",
+      "description": "A restrained palette where light does the decoration."
+    }
+  },
+  "meta": {
+    "title": "Auracasa — Imaginary Interiors, Made Real",
+    "description": "Clean, futuristic interiors with warm human touch. Auracasa portfolio & journal.",
+    "keywords": "interior design, AI design, futuristic interiors, warm minimalism, architecture"
+  },
+  "wishlist": {
+    "title": "My Wishlist",
+    "add": "Add to Wishlist",
+    "remove": "Remove from Wishlist",
+    "added": "Added to wishlist",
+    "removed": "Removed from wishlist",
+    "empty": "Your wishlist is empty",
+    "emptyDescription": "Start adding products you love to keep track of your favorites",
+    "viewAll": "View Wishlist",
+    "count": "{count} items",
+    "countSingular": "{count} item",
+    "clear": "Clear Wishlist",
+    "clearConfirm": "Are you sure you want to clear your wishlist?",
+    "export": "Export Wishlist",
+    "import": "Import Wishlist",
+    "total": "Total",
+    "shopNow": "Shop Now",
+    "search": "Search wishlist...",
+    "noResults": "No products found",
+    "sortBy": "Sort by",
+    "sortNewest": "Newest First",
+    "sortOldest": "Oldest First",
+    "sortPriceLow": "Price: Low to High",
+    "sortPriceHigh": "Price: High to Low"
+  },
+  "collections": {
+    "title": "My Collections",
+    "create": "Create Collection",
+    "createNew": "New Collection",
+    "name": "Collection Name",
+    "namePlaceholder": "e.g., Living Room Ideas",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe your collection...",
+    "share": "Share Collection",
+    "shareLink": "Share Link",
+    "copyLink": "Copy Link",
+    "linkCopied": "Link copied to clipboard!",
+    "public": "Public",
+    "private": "Private",
+    "makePublic": "Make Public",
+    "makePrivate": "Make Private",
+    "empty": "No collections yet",
+    "emptyDescription": "Create your first collection to organize your favorite products",
+    "edit": "Edit Collection",
+    "delete": "Delete Collection",
+    "deleteConfirm": "Are you sure you want to delete this collection?",
+    "addTo": "Add to Collection",
+    "removeFrom": "Remove from Collection",
+    "viewCollection": "View Collection",
+    "productCount": "{count} products",
+    "productCountSingular": "{count} product",
+    "created": "Created {date}",
+    "updated": "Updated {date}",
+    "sharedCollection": "Shared Collection",
+    "sharedBy": "Shared by Auracasa"
+  },
+  "newsletter": {
+    "title": "Stay Inspired",
+    "subtitle": "Get weekly design inspiration",
+    "description": "Get weekly design inspiration and curated product picks delivered to your inbox",
+    "emailPlaceholder": "Enter your email",
+    "namePlaceholder": "Your name (optional)",
+    "subscribe": "Subscribe",
+    "subscribing": "Subscribing...",
+    "success": "Thanks for subscribing!",
+    "successDescription": "Check your inbox for a confirmation email",
+    "error": "Something went wrong. Please try again.",
+    "invalidEmail": "Please enter a valid email address",
+    "alreadySubscribed": "You're already subscribed!",
+    "gdpr": "I agree to receive emails and understand I can unsubscribe anytime",
+    "gdprRequired": "Please accept to continue",
+    "unsubscribe": "Unsubscribe",
+    "privacyNote": "We respect your privacy. Unsubscribe anytime.",
+    "exitIntent": {
+      "title": "Before you go...",
+      "description": "Join our community for exclusive design inspiration and curated picks",
+      "dismiss": "No thanks",
+      "dontShowAgain": "Don't show this again"
+    },
+    "inline": {
+      "title": "Love this content?",
+      "description": "Get more design inspiration in your inbox"
+    }
+  },
+  "affiliate": {
+    "link": "Affiliate link",
+    "tooltip": "Affiliate link - We may earn a commission",
+    "disclaimer": "This post contains affiliate links. We may earn a commission from purchases made through these links at no additional cost to you.",
+    "learnMore": "Learn more",
+    "cookieCategory": "Affiliate Tracking",
+    "cookieDescription": "Track affiliate link clicks for commission purposes",
+    "externalLink": "External link"
+  }
+}

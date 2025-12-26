@@ -1,0 +1,215 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "portfolio": "Portfolio",
+    "journal": "Journal",
+    "about": "Über uns",
+    "services": "Leistungen",
+    "contact": "Arbeiten Sie mit uns"
+  },
+  "home": {
+    "hero": {
+      "title": "Imaginäre Innenräume.",
+      "titleAccent": "Wirklich gemacht.",
+      "description": "Auracasa entwirft klare, futuristische Räume mit warmer menschlicher Note. Entdecken Sie unser Portfolio oder lesen Sie das Journal hinter jeder Vision.",
+      "viewPortfolio": "Portfolio ansehen",
+      "ourServices": "Unsere Leistungen"
+    },
+    "featured": {
+      "title": "Ausgewählte Projekte"
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "KI-, reale und hybride Projekte — klar, futuristisch, warm.",
+    "tags": {
+      "ai": "KI",
+      "hybrid": "Hybrid",
+      "real": "Real",
+      "warmFuturism": "Warmer Futurismus",
+      "materialStudy": "Materialstudie",
+      "minimalBrut": "Minimaler Brutalismus"
+    }
+  },
+  "journal": {
+    "title": "Journal",
+    "posts": {
+      "vision": {
+        "title": "Auracasa Vision: Klarer Futurismus + Warme Menschlichkeit",
+        "body": "Kurzer Essay über die Verschmelzung futuristischer Linien mit warmen Materialien."
+      },
+      "colorStories": {
+        "title": "Farbgeschichten: Wüstenton & Himmelblau",
+        "body": "Palettennotizen und Moodboard-Anleitung."
+      }
+    }
+  },
+  "about": {
+    "title": "Über Auracasa",
+    "description": "Wir verbinden fantasievolles Design mit greifbarem Handwerk. Unser Team vereint KI-Exploration mit echten Materialien, um Räume zu schaffen, die sich sowohl futuristisch als auch menschlich anfühlen."
+  },
+  "services": {
+    "title": "Leistungen",
+    "essentials": {
+      "title": "Essentials",
+      "description": "Logo & Palette, 6 Visuals, 1 Fallstudie."
+    },
+    "premium": {
+      "title": "Premium",
+      "description": "Markenkit, 12 Visuals, 2 Fallstudien, Launch-Landing."
+    }
+  },
+  "contact": {
+    "title": "Arbeiten Sie mit uns",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "message": "Nachricht",
+      "send": "Senden",
+      "consent": "Mit dem Absenden stimmen Sie unserer {privacyLink} zu.",
+      "privacyPolicy": "Datenschutzerklärung"
+    }
+  },
+  "footer": {
+    "description": "Wir schaffen Räume, die zwischen Traum und Struktur existieren. Durch KI und Vorstellungskraft erforschen wir, wie zukünftiges Wohnen sich anfühlen könnte — klare Linien treffen auf warme Materialität.",
+    "explore": "Entdecken",
+    "legal": "Rechtliches",
+    "privacy": "Datenschutz",
+    "impressum": "Impressum",
+    "copyright": "© {year} Auracasa. Alle Rechte vorbehalten.",
+    "affiliateDisclosure": "Affiliate-Offenlegung: Diese Website enthält Affiliate-Links. Wir können eine Provision aus Käufen erhalten, die über diese Links getätigt werden."
+  },
+  "legal": {
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "lastUpdated": "Zuletzt aktualisiert: {date}"
+    },
+    "impressum": {
+      "title": "Impressum"
+    }
+  },
+  "common": {
+    "readMore": "Mehr lesen",
+    "learnMore": "Mehr erfahren",
+    "viewProject": "Projekt ansehen",
+    "backToHome": "Zurück zur Startseite",
+    "loading": "Lädt...",
+    "error": "Ein Fehler ist aufgetreten",
+    "notFound": "Seite nicht gefunden"
+  },
+  "projects": {
+    "sunsetLoft": {
+      "title": "Sunset Loft",
+      "tag": "KI • Warmer Futurismus",
+      "description": "Ein Loft in Sonnenuntergangstönen, das klare Geometrie mit weichen Texturen ausbalanciert."
+    },
+    "desertAtelier": {
+      "title": "Wüstenatelier",
+      "tag": "Hybrid • Materialstudie",
+      "description": "Ton, Leinen und Glas; ein Studio zwischen Vorstellung und Handwerk."
+    },
+    "concretePoem": {
+      "title": "Betongedicht",
+      "tag": "Real • Minimaler Brutalismus",
+      "description": "Eine zurückhaltende Palette, in der Licht die Dekoration übernimmt."
+    }
+  },
+  "meta": {
+    "title": "Auracasa — Imaginäre Innenräume, Wirklich Gemacht",
+    "description": "Klare, futuristische Innenräume mit warmer menschlicher Note. Auracasa Portfolio & Journal.",
+    "keywords": "Innenarchitektur, KI-Design, futuristische Innenräume, warmer Minimalismus, Architektur"
+  },
+  "wishlist": {
+    "title": "Meine Wunschliste",
+    "add": "Zur Wunschliste hinzufügen",
+    "remove": "Von Wunschliste entfernen",
+    "added": "Zur Wunschliste hinzugefügt",
+    "removed": "Von Wunschliste entfernt",
+    "empty": "Ihre Wunschliste ist leer",
+    "emptyDescription": "Beginnen Sie, Produkte hinzuzufügen, die Sie lieben",
+    "viewAll": "Wunschliste ansehen",
+    "count": "{count} Artikel",
+    "countSingular": "{count} Artikel",
+    "clear": "Wunschliste leeren",
+    "clearConfirm": "Möchten Sie Ihre Wunschliste wirklich leeren?",
+    "export": "Wunschliste exportieren",
+    "import": "Wunschliste importieren",
+    "total": "Gesamt",
+    "shopNow": "Jetzt einkaufen",
+    "search": "Wunschliste durchsuchen...",
+    "noResults": "Keine Produkte gefunden",
+    "sortBy": "Sortieren nach",
+    "sortNewest": "Neueste zuerst",
+    "sortOldest": "Älteste zuerst",
+    "sortPriceLow": "Preis: Niedrig bis Hoch",
+    "sortPriceHigh": "Preis: Hoch bis Niedrig"
+  },
+  "collections": {
+    "title": "Meine Sammlungen",
+    "create": "Sammlung erstellen",
+    "createNew": "Neue Sammlung",
+    "name": "Sammlungsname",
+    "namePlaceholder": "z.B. Wohnzimmer-Ideen",
+    "description": "Beschreibung",
+    "descriptionPlaceholder": "Beschreiben Sie Ihre Sammlung...",
+    "share": "Sammlung teilen",
+    "shareLink": "Link teilen",
+    "copyLink": "Link kopieren",
+    "linkCopied": "Link in Zwischenablage kopiert!",
+    "public": "Öffentlich",
+    "private": "Privat",
+    "makePublic": "Öffentlich machen",
+    "makePrivate": "Privat machen",
+    "empty": "Noch keine Sammlungen",
+    "emptyDescription": "Erstellen Sie Ihre erste Sammlung, um Ihre Lieblingsprodukte zu organisieren",
+    "edit": "Sammlung bearbeiten",
+    "delete": "Sammlung löschen",
+    "deleteConfirm": "Möchten Sie diese Sammlung wirklich löschen?",
+    "addTo": "Zur Sammlung hinzufügen",
+    "removeFrom": "Aus Sammlung entfernen",
+    "viewCollection": "Sammlung ansehen",
+    "productCount": "{count} Produkte",
+    "productCountSingular": "{count} Produkt",
+    "created": "Erstellt am {date}",
+    "updated": "Aktualisiert am {date}",
+    "sharedCollection": "Geteilte Sammlung",
+    "sharedBy": "Geteilt von Auracasa"
+  },
+  "newsletter": {
+    "title": "Bleiben Sie inspiriert",
+    "subtitle": "Wöchentliche Design-Inspiration",
+    "description": "Erhalten Sie wöchentliche Design-Inspiration und kuratierte Produktauswahl in Ihrem Posteingang",
+    "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
+    "namePlaceholder": "Ihr Name (optional)",
+    "subscribe": "Abonnieren",
+    "subscribing": "Wird abonniert...",
+    "success": "Vielen Dank für Ihr Abonnement!",
+    "successDescription": "Überprüfen Sie Ihren Posteingang für eine Bestätigungs-E-Mail",
+    "error": "Etwas ist schief gelaufen. Bitte versuchen Sie es erneut.",
+    "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "alreadySubscribed": "Sie sind bereits abonniert!",
+    "gdpr": "Ich stimme zu, E-Mails zu erhalten und verstehe, dass ich mich jederzeit abmelden kann",
+    "gdprRequired": "Bitte akzeptieren Sie, um fortzufahren",
+    "unsubscribe": "Abmelden",
+    "privacyNote": "Wir respektieren Ihre Privatsphäre. Jederzeit abmelden.",
+    "exitIntent": {
+      "title": "Bevor Sie gehen...",
+      "description": "Treten Sie unserer Community bei für exklusive Design-Inspiration und kuratierte Auswahl",
+      "dismiss": "Nein danke",
+      "dontShowAgain": "Nicht mehr anzeigen"
+    },
+    "inline": {
+      "title": "Gefällt Ihnen dieser Inhalt?",
+      "description": "Erhalten Sie mehr Design-Inspiration in Ihrem Posteingang"
+    }
+  },
+  "affiliate": {
+    "link": "Affiliate-Link",
+    "tooltip": "Affiliate-Link - Wir können eine Provision verdienen",
+    "disclaimer": "Dieser Beitrag enthält Affiliate-Links. Wir können eine Provision aus Käufen erhalten, die über diese Links getätigt werden, ohne zusätzliche Kosten für Sie.",
+    "learnMore": "Mehr erfahren",
+    "cookieCategory": "Affiliate-Tracking",
+    "cookieDescription": "Verfolgen Sie Affiliate-Link-Klicks für Provisionszwecke",
+    "externalLink": "Externer Link"
+  }
+}
