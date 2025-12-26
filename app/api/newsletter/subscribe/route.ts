@@ -12,31 +12,58 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // TODO: Integrate with your email service provider
-    // Examples:
-    // - Resend: https://resend.com/docs/send-with-nextjs
-    // - ConvertKit: https://developers.convertkit.com/
-    // - Mailchimp: https://mailchimp.com/developer/
-    
-    // For now, we'll just log the subscription
-    console.log('Newsletter subscription:', { email, name, source });
+    const resendApiKey = process.env.RESEND_API_KEY;
+    const resendAudienceId = process.env.RESEND_AUDIENCE_ID;
 
-    // Simulate API call
-    // In production, replace this with actual API integration:
-    // Example with Resend:
-    // const response = await fetch('https://api.resend.com/emails', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify({
-    //     from: 'Auracasa <newsletter@auracasa.com>',
-    //     to: [email],
-    //     subject: 'Welcome to Auracasa Newsletter',
-    //     html: '<p>Thank you for subscribing!</p>',
-    //   }),
-    // });
+    if (!resendApiKey || !resendAudienceId) {
+      console.error('Missing Resend configuration for newsletter subscriptions.');
+      return NextResponse.json(
+        { success: false, message: 'Newsletter provider is not configured' },
+        { status: 500 }
+      );
+    }
+
+    const [firstName, ...restName] = typeof name === 'string' ? name.split(' ') : [];
+    const lastName = restName.length > 0 ? restName.join(' ') : undefined;
+
+    const response = await fetch('https://api.resend.com/contacts', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${resendApiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        audience_id: resendAudienceId,
+        email,
+        first_name: firstName || undefined,
+        last_name: lastName,
+        unsubscribed: false,
+        metadata: {
+          source: source || 'newsletter',
+        },
+      }),
+    });
+
+    if (!response.ok) {
+      let providerMessage = 'Unable to subscribe at this time.';
+      try {
+        const errorBody = await response.json();
+        if (typeof errorBody?.message === 'string') {
+          providerMessage = errorBody.message;
+        }
+      } catch (parseError) {
+        console.warn('Unable to parse newsletter provider error.', parseError);
+      }
+
+      return NextResponse.json(
+        {
+          success: false,
+          message: 'Newsletter subscription failed',
+          error: providerMessage,
+        },
+        { status: response.status }
+      );
+    }
 
     // Return success response
     return NextResponse.json({

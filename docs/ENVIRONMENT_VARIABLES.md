@@ -49,6 +49,15 @@ NEXT_PUBLIC_AWIN_PUBLISHER_ID=your_publisher_id
 NEXT_PUBLIC_FORMSPREE_FORM_ID=xyzaylqn
 ```
 
+### Newsletter (Resend)
+```bash
+# Resend API Key
+RESEND_API_KEY=re_1234567890
+
+# Resend Audience ID (list identifier)
+RESEND_AUDIENCE_ID=aud_1234567890
+```
+
 ## Setup Instructions
 
 ### Development Environment
@@ -127,6 +136,18 @@ npm run dev
 - **Required**: Yes (for contact form submissions)
 - **Public**: Yes
 
+### RESEND_API_KEY
+- **Purpose**: API key for Resend newsletter subscriptions
+- **Example**: `re_1234567890`
+- **Required**: Yes (for newsletter subscriptions)
+- **Public**: No (server-side only)
+
+### RESEND_AUDIENCE_ID
+- **Purpose**: Audience/list identifier for Resend contacts
+- **Example**: `aud_1234567890`
+- **Required**: Yes (for newsletter subscriptions)
+- **Public**: No (server-side only)
+
 ## Security Notes
 
 1. **Never commit `.env.local` or `.env` files to version control**
@@ -184,3 +205,7 @@ NEXT_PUBLIC_TRADEDOUBLER_PUBLISHER_ID=123456
 
 # Email
 NEXT_PUBLIC_FORMSPREE_FORM_ID=xyzaylqn
+
+# Newsletter
+RESEND_API_KEY=re_1234567890
+RESEND_AUDIENCE_ID=aud_1234567890
