@@ -2,7 +2,7 @@ import "../globals.css";
 import type { Metadata } from "next";
 import { Playfair_Display, Inter, Space_Grotesk } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n/config';
 import ClientLayout from "./client-layout";
@@ -56,6 +56,8 @@ export default async function LocaleLayout({
   params: { locale: string };
 }) {
   const { locale } = params;
+
+  setRequestLocale(locale);
   
   // Validate locale
   if (!locales.includes(locale as any)) {
