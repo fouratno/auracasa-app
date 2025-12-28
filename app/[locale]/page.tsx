@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -26,6 +26,7 @@ export default async function Home({
   params: { locale: string };
 }) {
   const { locale } = params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'home' });
   const tProjects = await getTranslations({ locale, namespace: 'projects' });
 

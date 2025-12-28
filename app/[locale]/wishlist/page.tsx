@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import WishlistClient from './WishlistClient';
 
 export async function generateMetadata({ 
@@ -7,6 +7,7 @@ export async function generateMetadata({
 }: { 
   params: { locale: string } 
 }): Promise<Metadata> {
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'wishlist' });
   
   return {
@@ -20,5 +21,6 @@ export default async function WishlistPage({
 }: {
   params: { locale: string }
 }) {
+  setRequestLocale(locale);
   return <WishlistClient locale={locale} />;
 }
