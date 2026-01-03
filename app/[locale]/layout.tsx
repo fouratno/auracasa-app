@@ -1,10 +1,11 @@
 import "../globals.css";
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Playfair_Display, Inter, Space_Grotesk } from "next/font/google";
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, setRequestLocale } from 'next-intl/server';
-import { notFound } from 'next/navigation';
-import { locales } from '@/i18n/config';
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { locales } from "@/i18n/config";
 import ClientLayout from "./client-layout";
 
 // Premium font configuration
@@ -56,6 +57,7 @@ export default async function LocaleLayout({
   params: { locale: string };
 }) {
   const { locale } = params;
+  const linkConverterSrc = process.env.TRADEDOUBLER_LINK_CONVERTER_SRC;
 
   setRequestLocale(locale);
   
@@ -73,6 +75,24 @@ export default async function LocaleLayout({
       className={`${playfair.variable} ${inter.variable} ${spaceGrotesk.variable}`}
     >
       <body className="font-sans">
+        {linkConverterSrc ? (
+          <>
+            <Script id="tdlc-epi" strategy="beforeInteractive">
+              {`(function(){var path=window.location.pathname||\"\";var slug=path.replace(/^\\/+|\\/+$/g,\"\").replace(/\\//g,\"_\");window.tdlc_epi=slug||\"home\";if(!window.tdlc_epi2){var epi2=document.documentElement.getAttribute(\"data-tdlc-epi2\");if(epi2){window.tdlc_epi2=epi2;}}})();`}
+            </Script>
+            <Script
+              id="tdlc-link-converter"
+              strategy="afterInteractive"
+              data-tdlc="link-converter"
+              src={linkConverterSrc}
+            />
+            {process.env.NODE_ENV === "development" ? (
+              <Script id="tdlc-dev-check" strategy="afterInteractive">
+                {`(function(){var hasScript=!!document.querySelector('script[data-tdlc=\"link-converter\"]');console.info(\"[Tradedoubler] Link Converter script loaded:\",hasScript);})();`}
+              </Script>
+            ) : null}
+          </>
+        ) : null}
         <NextIntlClientProvider messages={messages}>
           <ClientLayout>{children}</ClientLayout>
         </NextIntlClientProvider>
